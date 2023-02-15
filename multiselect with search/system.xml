@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="product_kpi_report" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Product KPI report</label>
+            <tab>Vega</tab>
+            <resource>Vega_ProductCardReport::productcardreport_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General Configuration</label>
+                <field id="excluded_attributes" translate="label" type="multiselect" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>My Multiselect with Search Filter</label>
+                    <source_model>Vega\ProductCardReport\Model\Multiselect\Source</source_model>
+                    <can_be_empty>1</can_be_empty>
+                    <validate>validate-select</validate>
+                    <comment>This is my multiselect field with search filter.</comment>
+                    <frontend_class>my-multiselect-field</frontend_class>
+                    <frontend_model>Vega\ProductCardReport\Block\Adminhtml\Multiselect</frontend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
